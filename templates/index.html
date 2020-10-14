@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block page_title %} Index {% endblock %}
+
+{% block page_content %}
+<section class="content">
+    <header>
+        <h1>Função implementada</h1>
+        <p>f(x) = ( 1 / 48 ) * ( 693 * x^6 - 945 * x^4 + 315 * x^2 - 15)</p>
+    </header>
+
+    <form method="post">
+        {{ form.csrf_token }}
+        <div class="form-field">
+            {{ form.down_limit.label }}
+            {{ form.down_limit }}
+            {% if form.down_limit.errors %}
+                {% for error in form.down_limit.errors %}
+                    <span class="form-field-error"> {{ error }}</span>
+                {% endfor %}
+            {% endif %}
+        </div><!--form-field-->
+        
+        <div class="form-field">
+            {{ form.upper_limit.label }}
+            {{ form.upper_limit }}
+            {% if form.upper_limit.errors %}
+                {% for error in form.upper_limit.errors %}
+                    <span class="form-field-error"> {{ error }}</span>
+                {% endfor %}
+            {% endif %}
+        </div><!--form-field-->
+
+        <div class="form-field">
+            {{ form.precision.label }}
+            {{ form.precision }}
+            {% if form.precision.errors %}
+                {% for error in form.precision.errors %}
+                    <span class="form-field-error"> {{ error }}</span>
+                {% endfor %}
+            {% endif %}
+        </div><!--form-field-->
+
+        <div class="form-buttons">
+            <input type="submit" value="Calcular" title="Calcular">
+        </div><!--form-buttons-->
+    </form>
+</section><!--content-->
+{% endblock %}<!--page-content-->

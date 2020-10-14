@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block page_title %} Resultado {% endblock %}
+
+{% block page_content %}
+<section class="content">
+    <div class="result-box">
+
+        <div class="result-field">
+            <h1>k estimado</h1>
+            <p>{{ results['k_estimated'] }}</p>
+        </div><!--result-field-->
+        
+        <div class="result-field">
+            <h1>Raiz estimada</h1>
+            <p>{{ results['root'] }}</p>
+        </div><!--result-field-->
+        
+        <div class="result-field">
+            <h1>Número de iterações realizadas</h1>
+            <p>{{ results['n_iterations'] }}</p>
+        </div><!--result-field-->
+        
+        <a href="/index" class="a-button">Início</a>
+    </div><!--result-box-->
+
+</section><!--content-->
+{% endblock %}<!--page-content-->

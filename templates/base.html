@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Demonstração do método numérico da Bisseção.">
+    <meta name="keywords" content="numeric method, bissection, example, demonstration">
+    <meta name="keywords" content="método numérico, bisseção, exemplo, demonstração">
+    <title>BSM - {% block page_title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block page_head %}
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <a href="/index" title="Método da Bisseção"><h1>Método da Bisseção</h1></a>
+    </header>
+    
+    <main>
+        <div class="container">
+            {% block page_content %}
+            {% endblock %}
+        </div><!--containter-->
+    </main>
+
+    <footer id="my_credential"></footer>
+    <script src="{{ url_for('static', filename='js/credentials.js') }}"></script>
+    {% block page_scripts %}
+    {% endblock %}
+</body>
+</html>
