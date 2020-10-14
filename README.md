@@ -2,7 +2,7 @@
 
 Aplicação de demonstração da utilização do método numérico da bisseção para encontrar a raíz de função.
 
-Para acessar __[Clique aqui!]()__
+Para acessar __[Clique aqui!](https://bissection-method.herokuapp.com/)__
 
 ## Tecnologias utilizadas
 
